@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "cmeel.build"
-requires = ["cmeel-texinfo", "cmeel[build]"]
+requires = ["cmeel-automake", "cmeel-texinfo", "cmeel[build]"]
 
 [project]
 description = "cmeel distribution for gettext"
