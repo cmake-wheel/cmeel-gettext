@@ -14,7 +14,7 @@ homepage = "https://github.com/cmake-wheel/cmeel-gettext"
 repository = "https://github.com/cmake-wheel/cmeel-gettext.git"
 
 [tool.cmeel]
-build-number = 5
+build-number = 6
 py3-none = true
 run-tests = false
 
