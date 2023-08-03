@@ -12,7 +12,7 @@ ExternalProject_Add(
   BUILD_IN_SOURCE ON
   CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}" ${CMEEL_CONFIGURE_OPTIONS}
   COMMAND sed -i.bak "/SUBDIRS/s/doc //" Makefile
-  BUILD_COMMAND "make" "VERBOSE=1" "MAKEINFO=true"
+  BUILD_COMMAND "make" "VERBOSE=1"
   #TEST_COMMAND "make" "check"
   INSTALL_COMMAND "make" "install")
 
