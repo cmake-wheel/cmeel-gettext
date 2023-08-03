@@ -10,7 +10,7 @@ ExternalProject_Add(
   URL "https://ftpmirror.gnu.org/gnu/gettext/gettext-${GETTEXT_VERSION}.tar.xz"
   DOWNLOAD_EXTRACT_TIMESTAMP ON
   BUILD_IN_SOURCE ON
-  CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}"
+  CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}" ${CMEEL_CONFIGURE_OPTIONS}
   COMMAND sed -i.bak "/SUBDIRS/s/doc //" Makefile
   BUILD_COMMAND "make" "VERBOSE=1" "MAKEINFO=true"
   #TEST_COMMAND "make" "check"
