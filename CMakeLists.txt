@@ -8,7 +8,7 @@ include(ExternalProject)
 ExternalProject_Add(
   gettext
   URL "https://ftpmirror.gnu.org/gnu/gettext/gettext-${GETTEXT_VERSION}.tar.xz"
-  DOWNLOAD_EXTRACT_TIMESTAMP OFF
+  DOWNLOAD_EXTRACT_TIMESTAMP ON
   BUILD_IN_SOURCE ON
   CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}"
   COMMAND sed -i.bak "/SUBDIRS/s/doc //" Makefile
