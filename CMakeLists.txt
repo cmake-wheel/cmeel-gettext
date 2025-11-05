@@ -12,6 +12,7 @@ ExternalProject_Add(
   DOWNLOAD_EXTRACT_TIMESTAMP ON
   BUILD_IN_SOURCE ON
   CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}"
+  "--disable-java"
                     ${CMEEL_CONFIGURE_OPTIONS}
   COMMAND sed -i.bak "/SUBDIRS/s/doc //" Makefile
   BUILD_COMMAND "make" "VERBOSE=1"
