@@ -14,8 +14,10 @@ ExternalProject_Add(
   URL_HASH "SHA256=${SHA256}"
   DOWNLOAD_EXTRACT_TIMESTAMP ON
   BUILD_IN_SOURCE ON
-  CONFIGURE_COMMAND "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}"
-                    "--disable-java" ${CMEEL_CONFIGURE_OPTIONS}
+  CONFIGURE_COMMAND
+    "env" "CFLAGS=-Wno-incompatible-pointer-types" "./configure"
+    "--prefix=${CMAKE_INSTALL_PREFIX}" "--disable-java"
+    ${CMEEL_CONFIGURE_OPTIONS}
   BUILD_COMMAND "make"
   # TEST_COMMAND "make" "check"
   INSTALL_COMMAND "make" "install")
