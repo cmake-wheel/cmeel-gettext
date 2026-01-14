@@ -15,8 +15,8 @@ ExternalProject_Add(
   DOWNLOAD_EXTRACT_TIMESTAMP ON
   BUILD_IN_SOURCE ON
   CONFIGURE_COMMAND
-    "env" "CFLAGS=-Wno-incompatible-pointer-types" "./configure"
-    "--prefix=${CMAKE_INSTALL_PREFIX}" "--disable-java"
+    "env" "CFLAGS=-Wno-incompatible-pointer-types" "am_cv_func_iconv_works=yes"
+    "./configure" "--prefix=${CMAKE_INSTALL_PREFIX}" "--disable-java"
     ${CMEEL_CONFIGURE_OPTIONS}
   BUILD_COMMAND "make"
   # TEST_COMMAND "make" "check"
